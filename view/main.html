@@ -1,0 +1,61 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>黑魔法-视频挂机</title>
+		<link rel="icon" href="./favicon.ico" mce_href="./favicon.jpeg" type="image/x-icon">
+		<link rel="shortcut icon" href="./favicon.ico" mce_href="./favicon.jpeg" type="image/x-icon">
+		<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+	</head>
+
+	<body lang="zh-CN">
+		<script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<p class="pager">
+			<button type="button" class="btn btn-info"><a href="http://gdit.gaoxiaobang.com/">广东科学技术职业学院-网上选课入口</a></button>
+		</p>
+		<p style="color: #FFFFFF;">系统密码:你还是计算机学院的吗?</p>
+		<form class="center-block" style="max-width: 500;min-width: 50;" action="/" method="post">
+			<div class="form-group">
+				<label for="exampleInputEmail1">学号</label>
+				<input type="text" class="form-control" name="Usr" placeholder="学号">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">密码</label>
+				<input type="password" class="form-control" name="Psw" placeholder="密码，填错了就不能修改了哦">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">系统密码</label>
+				<input type="password" class="form-control" name="SystemPsw" placeholder="系统密码就在附近啦，努力，加油~~~">
+			</div>
+			{{with .Tip}}
+				<div class="alert alert-danger" role="alert">{{.}}</div>
+			{{end}}
+			<samp style="font-size: 10;">
+				<p>1.新增自动完成测试题，暂时只完成课程的第一个测试题（以后再开放一次性完成所有测试题）</p>
+				<p>2.提交后，系统将自动把你所选的两个课程里面的章节中的视频部分看完，除了每一章节的第一个视频</p>
+				<p>3.本系统功能有可能会失效，请及早使用</p>
+				<p>4.提交成功后不会有任何提示</p>
+				<p>5.请勿重复提交，以免系统异常（后果自负）</p>
+				<p>6.本系统不收任何费用，仅提供使用，不负任何责任，如有侵权请联系本人</p>
+				<p>7.联系方式QQ:嘿嘿嘿</p>
+			</samp>
+			<button type="submit" class="btn btn-danger btn-lg btn-primary center-block">提交</button>
+		</form>
+		<ul class="list-group center-block" style="max-width: 500;min-width: 50; margin-top: 40;">
+			<li class="list-group-item">
+				<span class="badge">{{.SubmittedCount}}</span> 已提交数
+			</li>
+			<li class="list-group-item">
+				<span class="badge">{{.HandledCount}}</span> 已处理数
+			</li>
+			<li class="list-group-item">
+				<span class="badge">{{.PendingCount}}</span> 待处理数
+			</li>
+		</ul>
+	</body>
+
+</html>
